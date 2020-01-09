@@ -86,10 +86,14 @@ for i,j in zip(tags,list2):
 GenScreenInf()
 PrScreenInf()
 #GenHTML_File()
-url2 = 'https://a0.muscache.com/im/pictures/2624c248-e3eb-4c2a-859a-308619cbd574.jpg'
 
+# Get Pics as BS and save locally to /images
+# Loop through list of "c" and get the main image
+url2 = 'https://a0.muscache.com/im/pictures/2624c248-e3eb-4c2a-859a-308619cbd574.jpg'
 urll = 'https://a0.muscache.com/im/pictures/8c283cfa-3e88-4bf8-8d41-1d8f657ca22f.jpg'
+
 Picture_request = requests.get(url2)
 if Picture_request.status_code == 200:
     with open("images/5.jpg", 'wb') as f:
         f.write(Picture_request.content)
+
